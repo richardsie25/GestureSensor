@@ -1,2 +1,4 @@
-# GestureSensor
-Scrolling Car Game using Hand gesture to control vehicle
+Scrolling Car Game made using pygame where you 
+avoid incoming obstacles using steering inputs
+coming from a hand gesture sensor connected to 
+an arduino
