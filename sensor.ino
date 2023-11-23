@@ -9,7 +9,7 @@ void setup() {
     Serial.println("Device initialized!");
   apds.enableProximity(true);
   apds.enableGesture(true);
-  apds.setGestureGain(2);
+  apds.setGestureGain(3);
 }
 
 void loop() {
