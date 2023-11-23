@@ -51,6 +51,9 @@ while True:
         if serial_data == "s" or keys[pygame.K_SPACE]:
             is_in_menu = False
             score = 0
+        if keys[pygame.K_ESCAPE]:
+            pygame.quit()
+            sys.exit()
     else:
         # Game logic
         if serial_data == "w":
@@ -92,9 +95,12 @@ while True:
     if is_in_menu:
         # Display menu text
         font = pygame.font.Font(None, 36)
-        text = font.render("Swipe Down to Start!", True, (255, 255, 255))
-        text_rect = text.get_rect(center=(width / 2, height / 2))
-        window.blit(text, text_rect)
+        text1 = font.render("Swipe Down to Start!", True, (255, 255, 255))
+        text2 = font.render("Enter Esc to Exit!", True, (255, 255, 255))
+        text1_rect = text1.get_rect(center=(width / 2, height / 2))
+        text2_rect = text2.get_rect(center=(width / 2, height / 2 + 50))
+        window.blit(text1, text1_rect)
+        window.blit(text2, text2_rect)
         # Update scrolling background position
         background_y += scroll_speed
         if background_y >= height:
